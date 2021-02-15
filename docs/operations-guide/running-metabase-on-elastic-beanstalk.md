@@ -179,7 +179,7 @@ The database settings screen will give you a number of options for your applicat
 - `Engine version` can simply be left on the default, which should be the latest version.
 - For `Instance class` you can choose any size, but we recommend `db.t2.small` or larger for production installs. Metabase is pretty efficient so there is no need to make this a big instance.
 - You can safely leave `Storage` to the default size.
-- Pick a `Username` and `Password` for your database. We suggest you hold onto these credentials in a password manager, as it can be useful for things like backups or troubleshooting. These settings will be automatically made available to your Metabase instance, so you will not need to put them in anywhere manually.
+- Pick a `Username` and `Password` for your database. We suggest you hold onto these credentials in a password manager, as they can be useful for things like backups or troubleshooting. These settings will be automatically made available to your Metabase instance.
 - You can safely leave the `Retention setting` as `Create snapshot`.
 - Under `Availability` we recommend the default value of `Low (one AZ)` for most circumstances.
 
