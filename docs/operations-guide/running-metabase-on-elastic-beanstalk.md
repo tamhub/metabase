@@ -29,7 +29,6 @@ The following guide will focus on deploying Metabase with a single instance and 
 - a load balancer (to make this deployment future proof and also provide features like HTTPS or Web Application Firewall security features)
 If you want to see a high-level architectural diagram of what you will achieve once you follow this guide, [click here](images/Metabase-AWS-H2.png)
 
-This architecture is the simplest one you can deploy but it is only prepared to test Metabase. Don't worry, this guide gives you all the information to configure this same architecture into something prepared for production workloads if you want to.
 
 If you would like a reliable, scalable and fully managed Metabase, please consider [Metabase Cloud](https://www.metabase.com/start/hosted/).
 
