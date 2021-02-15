@@ -34,7 +34,7 @@ If you would like a reliable, scalable and fully managed Metabase, please consid
 
 ## Quick Launch
 
-First of all you need to [download the file](https://downloads.metabase.com/{{ site.latest_version }}/launch-aws-eb.html) to upload to Elastic Beanstalk. This file contains the definition of Metabase docker image
+Download the [Metabase Docker image](https://downloads.metabase.com/{{ site.latest_version }}/launch-aws-eb.html) to upload to Elastic Beanstalk.
 
 Metabase provides several pre-configured Elastic Beanstalk launch URL to help you get started with new installations. If you are starting fresh we recommend you follow this link in a new tab to begin creating the Elastic Beanstalk deployment with a few choices pre-filled. Then just follow the step-by-step instructions below to complete your installation. Choose your region based on the proximity of your users or if you have strict regulatory requirements that don't let you spin up servers in other countries:
 
