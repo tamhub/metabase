@@ -200,7 +200,7 @@ When you click `Next` a new tab will open in your browser and you will be prompt
 
 ## Set or change environment variables
 
-In order to configure environment variables for your Elastic Beanstalk deployment, (e.g: [to connect the deployment to a separate RDS database](creating-RDS-database-on-AWS.html)) click on your Metabase environment in Elastic Beanstak, go to Configuration -> Software and you will find Environment Properties in the bottom. 
+In order to configure environment variables for your Elastic Beanstalk deployment (e.g., [to connect the deployment to a separate RDS database](creating-RDS-database-on-AWS.html)), click on your Metabase environment in Elastic Beanstak, go to Configuration -> Software, and look for the Environment Properties in the bottom. 
 
 From here you will be able to set or change the variables for configuring many properties of how [your Metabase deployment works](https://metabase.com/docs/latest/operations-guide/environment-variables.html)
 
