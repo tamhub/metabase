@@ -22,7 +22,7 @@
 # Running Metabase on AWS Elastic Beanstalk
 
 
-The following guide will focus on deploying Metabase with a single instance and the embedded H2 database with the following components:
+This quick launch setup is intended for testing purposes only, and is not intended for production use. We'll focus on deploying Metabase with a single instance and the embedded H2 database with the following components:
 - a region (where your Metabase application will exist)
 - a network (where your application will reside and interact with other applications or servers if needed)
 - a security group (a firewall, for keeping everything secure)
