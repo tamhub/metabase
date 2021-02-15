@@ -208,7 +208,7 @@ From here you will be able to set or change the variables for configuring many p
 
 ## Notifications
 
-Enter an `Email address` (`Notifications` block) to get notifications about your deployments and changes to your application. This is a very simple way to keep tabs on your Metabase environment, so we recommend putting a valid email in here.
+For a simple way to keep tabs on your application, enter an email address  in the **Notifications** block to get notifications about your deployment and any changes to your application.. 
 
 ---
 # Deploying New Versions of Metabase on Elastic Beanstalk
