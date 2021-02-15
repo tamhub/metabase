@@ -21,7 +21,6 @@
 
 # Running Metabase on AWS Elastic Beanstalk
 
-AWS Elastic Beanstalk has been a platform for easily deploying Metabase for a long time, however, we have changed this guide in order to provide better support and prevent users from using features from Elastic Beanstalk that will limit scaling Metabase easily in the future.
 
 The following guide will focus on deploying Metabase with a single instance and the embedded H2 database with the following components:
 - a region (where your Metabase application will exist)
