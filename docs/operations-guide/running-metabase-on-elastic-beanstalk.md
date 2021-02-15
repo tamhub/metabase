@@ -235,4 +235,4 @@ Here's each step:
   - Click the `Deploy` button to begin the deployment.
   - Wait until all deployment activities are completed, then verify the deployment by accessing the Metabase application URL.
 
-Once a new version is deployed you can safely delete the old Application Version if desired. We recommend keeping at least one previous version available for a while in case you desire to revert for any reason.
+Once a new version is deployed, you can safely delete the old Application Version. We recommend keeping at least one previous version available for a while in case you want to revert for any reason.
