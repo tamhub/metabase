@@ -10,7 +10,7 @@
 # Logging
 ## Network Access log
 
-If you need a log of all the IP addresses and URLs that were accesed during a specific period, you can make the Load Balancer to send those logs to S3. This is useful for analyzing the traffic to your Metabase instance.
+If you need a log of all the IP addresses and URLs that were accesed during a specific period, you can configure the Load Balancer to send those logs to S3. This is useful for analyzing the traffic to your Metabase instance.
 
 To enable this logging, you have to go to the settings of the Load Balancer and enable "Store Logs" in the Access Log Files section. You will need to choose an S3 bucket to dump all the logs and a prefix that will identify the logs coming from this load balancer.
 
