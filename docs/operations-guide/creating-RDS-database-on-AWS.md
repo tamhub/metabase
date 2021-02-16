@@ -94,6 +94,6 @@ This step can take around 20 minutes. If the deletion fails, you'll have to iden
 Return to RDS and select the **Snapshots** option on the left of the page. You should see a Manual Snapshot listed.
 ![RDS Snapshots](images/RDSSnapshotsMenu.png)
 
-Select that snapshot and click on **Actions** -> Restore Snapshot
+Select that snapshot and click on **Actions** → Restore Snapshot.
 
 From this step on, you can follow the same steps as the [Configuring RDS for Metabase (the recommended guide)](#configuring-rds-for-metabase-the-recommended-guide) from [step 2](#step-2).
