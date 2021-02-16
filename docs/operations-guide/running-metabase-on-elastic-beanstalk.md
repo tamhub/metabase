@@ -209,7 +209,7 @@ In the Environment Properties section, you'll be able to set or change the varia
 
 ## Notifications
 
-For a simple way to keep tabs on your application, enter an email address  in the **Notifications** block to get notifications about your deployment and any changes to your application.. 
+For a simple way to keep tabs on your application, enter an email address  in the **Notifications** block to get notifications about your deployment and any changes to your application.
 
 ---
 # Deploying New Versions of Metabase on Elastic Beanstalk
