@@ -91,7 +91,7 @@ Go to the Elastic Beanstalk Metabase Application, select the running environment
 This step can take around 20 minutes. If the deletion fails, you'll have to identify through CloudFormation which resources failed to be deleted and delete them yourself.
 
 ## Step 3
-Return to RDS and select the **Snapshots** option on the left of the page. You should see a Manual Snapshot listed
+Return to RDS and select the **Snapshots** option on the left of the page. You should see a Manual Snapshot listed.
 ![RDS Snapshots](images/RDSSnapshotsMenu.png)
 
 Select that snapshot and click on **Actions** -> Restore Snapshot
