@@ -52,7 +52,7 @@ On the page that appears after you click on the database identifer, you will see
 In the **Security group rules** section, you'll see the Security Group that was created, but the group will have a rule that allows only one IP address to access the database. You need to change this rule to allow access to the Elastic Beanstalk environment.
 ![RDS Security Group Rules](images/RDSSecurityGroupRules.png)
 
-To configure the rule for the database, select the INBOUND rule, then click on the Inbound rules tab on the lower part of the page.
+To configure the rule for the database, select the **CIDR/IP - Inbound** rule, then click on the **Inbound rules** tab on the lower part of the page.
 
 ![RDS Security Group Rules](images/RDSInboundRule.png)
 
