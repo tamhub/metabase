@@ -78,7 +78,8 @@ Before trying to enable HTTPS support, you must upload a server certificate to y
   - The certificate MUST match the domain you plan to use for your Metabase install.
 - In SSL Policy select "ELBSecurityPolicy-TLS-1-2-2017-01".
 - Scroll to the bottom of the page and click **Save**.
-  - Your Environment will begin updating with your new change. You will have to wait for this to complete before making additional updates.
+
+Your Environment will begin updating with your new change. You will have to wait for this to complete before making additional updates.
  
  Once this change is made you will no longer be able to access your Metabase instance at the *.elasticbeanstalk.com URL provided by Amazon because it will result in a certificate mismatch. To continue accessing your secure Metabase instance you must [Set up a DNS CNAME](#setup-dns-cname).
 
