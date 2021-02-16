@@ -16,7 +16,7 @@ If you want to move from using Metabase just for testing to something that is re
 In AWS, enter RDS in the search box or select RDS from the dropdown button on the top left of the page. Once inside RDS, click on the **Create database** button.
 
 ## Step 2
-- Create Database: select MySQL or PostgreSQL as engine types, as these two are the ones that Metabase support as the Application Database (where Metabase will save all of its configurations). For this example we will choose PostgreSQL on its latest version available in AWS at this time (12.4-R1)
+- Create Database: select MySQL or PostgreSQL as engine types, as these two are the ones that Metabase support as the Application Database (where Metabase will save all of its configurations). For this example we will choose PostgreSQL on its latest version available in AWS at the time of writing (12.4-R1).
 
 - Templates: you can leave "Production" selected, or choose any other option that better suits your needs.
 
