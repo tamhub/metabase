@@ -13,7 +13,7 @@
 If you want to move from using Metabase just for testing to something that is ready for the big time, you need to use a production-grade database like PostgreSQL or MySQL/MariaDB. Here's a [high level architecture diagram](images/Metabase-AWS-SI.png) of Metabase deployed with a dedicated application database.
 
 ## Step 1
-In AWS, enter RDS in the search box or select RDS from the dropdown button on the top left of the page. Once inside RDS, click on the **Create database** button
+In AWS, enter RDS in the search box or select RDS from the dropdown button on the top left of the page. Once inside RDS, click on the **Create database** button.
 
 ## Step 2
 - Create Database: select MySQL or PostgreSQL as engine types, as these two are the ones that Metabase support as the Application Database (where Metabase will save all of its configurations). For this example we will choose PostgreSQL on its latest version available in AWS at this time (12.4-R1)
