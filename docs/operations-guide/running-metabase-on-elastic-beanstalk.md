@@ -108,7 +108,7 @@ In the **Processes** section, select the default process and click on `Actions` 
 
 ![Elastic Beanstalk Monitoring Process](images/EBProcessesSection.png)
 
-The `Health check path` is where the Load balancer asks the application if its healthy so it can send traffic to. Set this path to `/api/health`
+The **Health check path** is where the Load balancer asks the application if its healthy so it can send traffic to. Set this path to `/api/health`
 
 ![Elastic Beanstalk Monitoring endpoint](images/EBProcessEditEndpointHealth.png)
 
