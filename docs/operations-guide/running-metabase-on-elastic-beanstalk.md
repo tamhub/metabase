@@ -128,7 +128,7 @@ You need to select __at least__ 2 zones where the Load Balancer will balance the
 
 ![Elastic Beanstalk Networking configuration](images/EBNetworkingConfig.png)
 
-After configuring the zones where the Load Balancer will exist and the ones that the application will live, click `Save` at the bottom of the page. 
+After configuring the zones for both the load balancer and the application, click **Save** at the bottom of the page. 
 
 ### 2.3 Final step and deploy
 
