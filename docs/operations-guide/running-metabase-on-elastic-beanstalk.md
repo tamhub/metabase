@@ -175,7 +175,7 @@ If you want to continue on this path and you know what you are doing, then: look
 The database settings screen will give you a number of options for your application database. Regarding individual settings, we recommend:
 
 - `Snapshot` should be left as `None`.
-- `Engine` should be set to `postgres`. Metabase also supports MySQL/Maria DB as backing databases but **only** on a separate running RDS connected via [environment variables](#set-or-change-environment-variables). Trying to follow these steps and selecting MySQL will result in an error.
+- `Engine` should be set to `postgres`. Metabase also supports MySQL/Maria DB as backing databases, but **only** on a separate running RDS connected via [environment variables](#set-or-change-environment-variables). Trying to follow these steps and selecting MySQL will result in an error.
 - `Engine version` can simply be left on the default, which should be the latest version.
 - For `Instance class` you can choose any size, but we recommend `db.t2.small` or larger for production installs. Metabase is pretty efficient so there is no need to make this a big instance.
 - You can safely leave `Storage` to the default size.
