@@ -116,7 +116,7 @@ After configuring this health check you can click on `Save` at the bottom of the
 
 ### 2.2 Enabling VPC
 
-A Virtual Private Cloud (VPC) is a virtual network that will be logically isolated for the resources that you put inside. Inside these VPC's you can create subnets, firewall rules, route tables and many more. It's one of the foundational features of AWS and you can learn more about it [here](https://aws.amazon.com/vpc/faqs/)
+A Virtual Private Cloud (VPC) is a virtual network you can use to isolate resources. Inside these VPC's, you can create subnets, firewall rules, route tables and many more. It's one of the foundational features of AWS, and you can learn more about it [here](https://aws.amazon.com/vpc/faqs/).
 
 You must enable your Application to exist in a VPC, otherwise you will receive an error when creating it. To use a VPC, head to the Network section in the configuration and click on the `Edit` button.
 
