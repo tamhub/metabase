@@ -168,7 +168,7 @@ This was the recommended step in the previous versions of the configuration of M
 
 If you want to use a production-grade database based on best practices to persist all Metabase configurations you have to [create one in RDS separately](creating-RDS-database-on-AWS.html) or manage your own on a separate server and then connect the Elastic Beanstalk instance/s with the RDS database through [environment variables](#set-or-change-environment-variables).
 
-If you want to continue on this path and you know what you are doing, then: look for the Database configuration pane as below. and click on the `Edit` button.
+If you want to continue on this path and you know what you are doing, then: look for the **Database** configuration pane as below. and click on the `Edit` button.
 
 ![Elastic Beanstalk Database Configuration Options](images/EBDatabaseConfigurationOptions.png)
 
