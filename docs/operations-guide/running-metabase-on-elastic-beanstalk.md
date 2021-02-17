@@ -124,7 +124,7 @@ You must enable your Application to exist in a VPC, otherwise you'll receive an 
 
 Once inside the Network configuration, you need to select the VPC where the Application will exist. If you haven't created a VPC, then AWS creates a `default` VPC per region that you can use.
 
-You need to select __at least__ 2 zones where the Load Balancer will balance the traffic and also __at least__ 1 zone where the instance will exist. There has to be a zone in common for the balancer to send traffic to a living instance.
+You need to select __at least__ 2 zones where the Load Balancer will balance the traffic, and  __at least__ 1 zone where the instance will exist. For the load balancer to send traffic to a living instance, there has to be a zone in common.
 
 ![Elastic Beanstalk Networking configuration](images/EBNetworkingConfig.png)
 
