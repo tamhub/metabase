@@ -81,8 +81,8 @@ As for the domain URL, Feel free to get creative — just remember that the URL 
 
 While most of the fields here will be correctly pre-filled by following the launch URL above, you'll just need to do two things:
 
-- First, make sure `Platform` is set to `Docker`, with the platform branch dropdown set to `Docker running on 64bit Amazon Linux 2` and Platform version to the one that has a `(Recommended)` tag.
-- Next, change the `Application code` setting to `Upload your code`
+1. Make sure **Platform** is set to `Docker`, with the platform branch dropdown set to `Docker running on 64bit Amazon Linux 2`, and Platform version to the one that has a `(Recommended)` tag.
+2. Change the **Application code** setting to `Upload your code`.
 
 ![Elastic Beanstalk Base Configuration](images/EBUploadYourCode.png)
 
