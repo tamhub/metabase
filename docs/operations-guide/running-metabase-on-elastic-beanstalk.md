@@ -86,7 +86,7 @@ While most of the fields here will be correctly pre-filled by following the laun
 
 ![Elastic Beanstalk Base Configuration](images/EBUploadYourCode.png)
 
-- On the Source Code Origin section click the `Choose file` button with the `Local File` radio button selected and upload the file you dowloaded on the very beginning of this guide (metabase-aws-eb.zip):
+- In the **Source code origin** section click the `Choose file` button with the `Local File` radio button selected and upload the file you dowloaded at the very beginning of this guide (`metabase-aws-eb.zip`):
 
 ![Elastic Beanstalk Base Configuration](images/EBUploadZipFile.png)
 
