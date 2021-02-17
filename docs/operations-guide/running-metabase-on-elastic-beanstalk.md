@@ -112,7 +112,7 @@ The `Health check path` is where the Load balancer asks the application if its h
 
 ![Elastic Beanstalk Monitoring endpoint](images/EBProcessEditEndpointHealth.png)
 
-After configuring this health check you can click on `Save` at the bottom of the page
+After configuring this health check you can click on `Save` at the bottom of the page.
 
 ### 2.2 Enabling VPC
 
