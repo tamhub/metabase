@@ -132,7 +132,8 @@ After configuring the zones for both the load balancer and the application, clic
 
 ### 2.3 Final step and deploy
 
-Now go to the Capacity section and click `Edit`
+Now go to the Capacity section and click **Edit**.
+
 ![Elastic Beanstalk Networking configuration](images/EBCapacity.png)
 
 The only change you need to do here is to reduce the number of Instances from 4 (the default number) to 1, as we still haven't created a centralized database where Metabase will save all of its configurations and will be using only the embedded H2 database which lives __inside__ the Metabase container and [is *not recommended* for production workloads](https://www.metabase.com/docs/latest/operations-guide/configuring-application-database.html) as there will be no way to backup and maintain that database. **When your instance is restarted for any reason you'll lose all your Metabase data**. If you are just doing a quick trial of Metabase that may be okay but otherwise you would like to start [creating your database engine in RDS separately](creating-RDS-database-on-AWS.html) or deploy one a separate server.
