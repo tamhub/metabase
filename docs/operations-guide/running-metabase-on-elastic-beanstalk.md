@@ -165,7 +165,7 @@ There are many ways to customize your Elastic Beanstalk deployment, but commonly
 
 ## PostgreSQL Metabase INSIDE Elastic Beanstalk configuration (not recommended)
 
-This was the recommended step in the previous versions of the configuration of Metabase in Elastic Beanstalk, however, as AWS Elastic Beanstalk creates a CloudFormation template when you hit the `Create App` button, this means that the database will be created with the Elastic Beanstalk stack and removed when you remove the application.
+When you hit the `Create App` button, AWS Elastic Beanstalk creates a CloudFormation template.  This template means that the database will be created with the Elastic Beanstalk stack, and removed when you remove the application.
 
 If you want to use a production-grade database based on best practices to persist all Metabase configurations you have to [create one in RDS separately](creating-RDS-database-on-AWS.html) or manage your own on a separate server and then connect the Elastic Beanstalk instance/s with the RDS database through [environment variables](#set-or-change-environment-variables).
 
