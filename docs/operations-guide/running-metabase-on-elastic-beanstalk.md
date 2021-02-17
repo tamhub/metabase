@@ -104,7 +104,7 @@ Click on the `Edit` link under the Load Balancer section as seen here:
 
 ![Elastic Beanstalk Monitoring](images/EBLoadBalancerEdit.png)
 
-In the Processes section, select the default process and click on `Actions` -> Edit
+In the **Processes** section, select the default process and click on `Actions` → Edit.
 
 ![Elastic Beanstalk Monitoring Process](images/EBProcessesSection.png)
 
