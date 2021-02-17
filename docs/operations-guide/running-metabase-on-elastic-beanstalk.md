@@ -98,7 +98,7 @@ Click **Review and launch**.  You'll be directed to a page to configure and laun
 
 ### 2.1 Enabling enhanced health checks
 
-You will need to enable enhanced health checks for your Elastic Beanstalk environment as this will tell the load balancer that the environment is healthy.
+To set up your load balancer, you'll need to enable enhanced health checks for your Elastic Beanstalk environment. 
 
 Click on the `Edit` link under the Load Balancer section as seen here:
 
