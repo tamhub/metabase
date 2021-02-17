@@ -90,7 +90,7 @@ While most of the fields here will be correctly pre-filled by following the laun
 
 ![Elastic Beanstalk Base Configuration](images/EBUploadZipFile.png)
 
-These settings will run the Metabase application using [Docker](https://www.docker.com) under the hood, using the official Metabase Docker image which is [published on Dockerhub](https://hub.docker.com/r/metabase/metabase/).
+These settings will run the Metabase application using the [official Metabase Docker image on Dockerhub](https://hub.docker.com/r/metabase/metabase/).
 
 You can now go ahead and click `Review and launch` and you will be directed to a page with many sections where you will have to do a bit more configuration to launch your instance.
 
