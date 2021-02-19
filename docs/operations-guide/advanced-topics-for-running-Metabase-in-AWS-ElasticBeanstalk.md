@@ -10,16 +10,20 @@
 # Logging
 ## Network Access log
 
-If you need a log of all the IP addresses and URLs that were accesed during a specific period, you can make the Load Balancer to send those logs to S3. This is useful for analyzing the traffic to your Metabase instance.
+If you need a log of all the IP addresses and URLs that were accessed during a specific period, you can configure the Load Balancer to send those logs to S3. This is useful for analyzing the traffic to your Metabase instance.
 
-To enable this logging, you have to go to the settings of the Load Balancer and enable "Store Logs" in the Access Log Files section. You will need to choose an S3 bucket to dump all the logs and a prefix that will identify the logs coming from this load balancer.
+To enable this logging, you have to go to the settings of the Load Balancer and enable **Store Logs** in the **Access Log Files** section. You will need to choose an S3 bucket to dump the logs in, and a prefix that will identify the logs coming from this load balancer.
 
 ## Application Logs
 
 If you want to retain the Metabase application logs, you can publish them to an S3 bucket:
 
 - On your Metabase Elastic Beanstalk environment, click on the `Configuration` link in the navigation bar on the left side. On the configuration page, click on the `Edit` button next to `Software`.
+<<<<<<< HEAD
 - Scroll down and then check the box next to **Enabled** in S3 log storage section
+=======
+- Scroll down and then check the box next to **Enabled** in S3 log storage section.
+>>>>>>> 6e45e6a86c5d22dca67ac2eb364c83cf17155425
 - Click `Save` in the bottom right corner.
 
 You'll need to wait a minute for the logging to kick in, but then you should be good to go. Elastic Beanstalk will now periodically publish the application log files to S3, which you can download whenever you need to analyze them.
@@ -78,7 +82,12 @@ Before trying to enable HTTPS support, you must upload a server certificate to y
   - The certificate MUST match the domain you plan to use for your Metabase install.
 - In SSL Policy select "ELBSecurityPolicy-TLS-1-2-2017-01".
 - Scroll to the bottom of the page and click **Save**.
+<<<<<<< HEAD
   - Your Environment will begin updating with your new change. You will have to wait for this to complete before making additional updates.
+=======
+
+Your Environment will begin updating with your new change. You will have to wait for this to complete before making additional updates.
+>>>>>>> 6e45e6a86c5d22dca67ac2eb364c83cf17155425
  
  Once this change is made you will no longer be able to access your Metabase instance at the *.elasticbeanstalk.com URL provided by Amazon because it will result in a certificate mismatch. To continue accessing your secure Metabase instance you must [Set up a DNS CNAME](#setup-dns-cname).
 
