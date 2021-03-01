@@ -11,9 +11,9 @@
     - [2.2 Enabling VPC](#22-enabling-vpc)
     - [2.3 Final step and deploy](#23-final-step-and-deploy)
   - [Step 3 - Wait for your environment to start](#step-3---wait-for-your-environment-to-start)
-- [Additional Options](#additional-options)
+- [Optional extras](#optional-extras)
   - [Instance Details](#instance-details)
-  - [PostgreSQL Metabase INSIDE Elastic Beanstalk configuration (not recommended)](#postgresql-metabase-inside-elastic-beanstalk-configuration-not-recommended)
+  - [Application Database creation inside Elastic Beanstalk configuration (not recommended)](#application-database-creation-inside-elastic-beanstalk-configuration-not-recommended)
   - [Permissions](#permissions)
   - [Set or change environment variables](#set-or-change-environment-variables)
   - [Notifications](#notifications)
@@ -118,7 +118,7 @@ After configuring this health check you can click on `Save` at the bottom of the
 
 A Virtual Private Cloud (VPC) is a virtual network you can use to isolate resources. Inside these VPC's, you can create subnets, firewall rules, route tables and many more. It's one of the foundational features of AWS, and you can learn more about it [here](https://aws.amazon.com/vpc/faqs/).
 
-You must enable your Application to exist in a VPC, otherwise you'll receive an error when creating it. To use a VPC, head to the **Network** section in the configuration and click on the `Edit` button.
+You must configure your Application launch in a VPC, otherwise you'll receive an error when creating it as AWS no longer supports launching instances outside VPC's. To use a VPC, head to the **Network** section in the configuration and click on the `Edit` button.
 
 ![Elastic Beanstalk Network section](images/EBNetworkSection.png)
 
@@ -154,16 +154,16 @@ To see your new Metabase instance, simply click on the link under your environme
 
 Now that you’ve installed Metabase, it’s time to [set it up and connect it to your database](../setting-up-metabase.md).
 
-# Additional Options
+# Optional extras
 
 There are many ways to customize your Elastic Beanstalk deployment, but commonly modified settings include:
 
 ## Instance Details
 
 - `Instance type` (`Instances` block) is for picking the size of AWS instance you want to run. We recommend **at least** `t3a.small` for most uses. You can always [scale](https://www.metabase.com/learn/data-diet/analytics/metabase-at-scale.html) vertically by changing this configuration.
-- `EC2 key pair` (`Security` block) is only needed if you want to SSH into your instance directly which is __not recommended__
+- `EC2 key pair` (`Security` block) is only needed if you want to SSH into your instance directly which is **not recommended**.
 
-## PostgreSQL Metabase INSIDE Elastic Beanstalk configuration (not recommended)
+## Application Database creation inside Elastic Beanstalk configuration (not recommended)
 
 When you hit the `Create App` button, AWS Elastic Beanstalk creates a CloudFormation template.  This template means that the database will be created with the Elastic Beanstalk stack, and removed when you remove the application.
 
