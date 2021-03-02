@@ -13,11 +13,7 @@
 If you want to move from using Metabase just for testing to something that is ready for the big time, you need to use a production-grade database like PostgreSQL or MySQL/MariaDB. Here's a [high level architecture diagram](images/Metabase-AWS-SI.png) of Metabase deployed with a dedicated application database.
 
 ## Step 1
-<<<<<<< HEAD
-In AWS, enter RDS in the search box or select RDS from the dropdown button on the top left of the page. Once inside RDS, click on the **Create database** button
-=======
 In AWS, enter RDS in the search box or select RDS from the dropdown button on the top left of the page. Once inside RDS, click on the **Create database** button.
->>>>>>> 6e45e6a86c5d22dca67ac2eb364c83cf17155425
 
 ## Step 2
 - Create Database: select MySQL or PostgreSQL as engine types, as these two are the ones that Metabase support as the Application Database (where Metabase will save all of its configurations). For this example we will choose PostgreSQL on its latest version available in AWS at the time of writing (12.4-R1).
@@ -70,26 +66,15 @@ On the edit page, you need to delete the IP address that appears as default, the
 
 # Step 4 
 
-<<<<<<< HEAD
-After having finished all the previous steps,go to the your Elastic Beanstalk deployment and add the RDS instance as the Application Database with [Environment variables](environment-variables.html) under the [Software configuration](running-metabase-on-elastic-beanstalk.html#set-or-change-environment-variables).
-=======
 After having finished all the previous steps, go to the your Elastic Beanstalk deployment and add the RDS instance as the Application Database with [Environment variables](environment-variables.html) under the [Software configuration](running-metabase-on-elastic-beanstalk.html#set-or-change-environment-variables).
->>>>>>> 6e45e6a86c5d22dca67ac2eb364c83cf17155425
 
 ---
 # Decouple your RDS database from the Elastic Beanstalk deployment
 
-<<<<<<< HEAD
-In the previous versions of this guide, we recommended the creation of an Elastic Beanstalk deployment (AWS's service for deploying applications easily) that had a RDS (AWS's relational database service) database included in the creation by default thanks to the magic of CloudFormation (AWS's Infrastructure as a Code service). While this was an easier approach to simplify the deployments, we found out that this approach was not the optimal for building a future-proof architecture, since leaving to Elastic Beanstalk the creation of the database lead to limitations in the configuration of the database that would limit the choice for users. That's the reason why we now recommend to create the database separately from the Metabase deployment and glue them together manually, or even separate both components with this guide:
-
-
-- This procedure will generate downtime, so make sure to communicate your users that Metabase will be down while you recreate the environment with the new database.
-=======
 In the previous versions of this guide, we recommended the creation of an Elastic Beanstalk deployment (AWS's service for deploying applications easily) that had a RDS (AWS's Relational Database Service) database included in the creation by default thanks to the magic of CloudFormation (AWS's Infrastructure as a Code service). While this was an easier approach to simplify the deployments, we found out that this approach was not the optimal for building a future-proof architecture, since leaving the creation of the database to Elastic Beanstalk lead to limitations in the configuration of the database that would limit the choice for users. That's the reason why we now recommend creating the database separately from the Metabase deployment and glue them together manually, or even separate both components with this guide:
 
 
 - This procedure will generate downtime, so make sure to communicate to your users that Metabase will be down while you recreate the environment with the new database.
->>>>>>> 6e45e6a86c5d22dca67ac2eb364c83cf17155425
 - You'll need the master username and password for the database you used when you created the Elastic Beanstalk instance.
 
 ## Step 1
@@ -103,15 +88,6 @@ Identify the RDS endpoint that your Elastic Beanstalk is using by going to the c
 Go to the Elastic Beanstalk Metabase Application, select the running environment, and terminate it. Confirm that the database will be terminated __with snapshot__)
 ![Terminate environment](images/EBTerminateEnvironment.png)
 
-<<<<<<< HEAD
-This step can take many minutes. If the deletion fails, you'll have to identify through CloudFormation which resources failed to be deleted and delete them yourself.
-
-## Step 3
-Return to RDS and select the **Snapshots** option on the left of the page. You should see a Manual Snapshot listed
-![RDS Snapshots](images/RDSSnapshotsMenu.png)
-
-Select that snapshot and click on **Actions** -> Restore Snapshot
-=======
 This step can take around 20 minutes. If the deletion fails, you'll have to identify through CloudFormation which resources failed to be deleted and delete them yourself.
 
 ## Step 3
@@ -119,6 +95,5 @@ Return to RDS and select the **Snapshots** option on the left of the page. You s
 ![RDS Snapshots](images/RDSSnapshotsMenu.png)
 
 Select that snapshot and click on **Actions** → Restore Snapshot.
->>>>>>> 6e45e6a86c5d22dca67ac2eb364c83cf17155425
 
 From this step on, you can follow the same steps as the [Configuring RDS for Metabase (the recommended guide)](#configuring-rds-for-metabase-the-recommended-guide) from [step 2](#step-2).
