@@ -14,8 +14,6 @@ services:
       - POSTGRES_DB=metabase
       - POSTGRES_USER=metabase
       - POSTGRES_PASSWORD=SUPERSECRET 
-    networks:
-      - metabase
 
   metabase:
     container_name: metabase-app
@@ -23,7 +21,7 @@ services:
     build: .
     restart: always 
     volumes:
-      - "metabase-data:/metabase-data"
+      - "metabase-data:/app"
     ports:
       - "3000:3000"
     environment:
@@ -33,12 +31,7 @@ services:
       - MB_DB_USER=metabase
       - MB_DB_PASS=SUPERSECRET
       - MB_DB_HOST=db
-    networks:
-      - metabase
-
-networks:
-  metabase:
-    driver: bridge
+    command: bash -c "cd /app && lein run"
 
 volumes:
   database:

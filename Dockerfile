@@ -74,42 +74,44 @@ RUN curl https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem -o rd
   -keystore /etc/ssl/certs/java/cacerts \
   -keypass changeit -storepass changeit
 
-COPY --from=frontend /app/source/. .
-COPY --from=backend /app/source/. .
-COPY --from=backend /root/. /root/
+# COPY --from=frontend /app/source/. .
+# COPY --from=backend /app/source/. .
+# COPY --from=backend /root/. /root/
 
-# add the rest of the source
-COPY . .
+COPY . /app
 
-# build the app
-RUN INTERACTIVE=false bin/build
+# # add the rest of the source
+# COPY . .
 
-# ###################
-# # STAGE 2: runner
-# ###################
+# # build the app
+# RUN INTERACTIVE=false bin/build
 
-FROM adoptopenjdk/openjdk11:alpine-jre as runner
+# # ###################
+# # # STAGE 2: runner
+# # ###################
 
-WORKDIR /app
+# FROM adoptopenjdk/openjdk11:alpine-jre as runner
 
-ENV FC_LANG en-US LC_CTYPE en_US.UTF-8
+# WORKDIR /app
 
-# dependencies
-RUN apk -U upgrade && apk add --no-cache bash ttf-dejavu fontconfig
+# ENV FC_LANG en-US LC_CTYPE en_US.UTF-8
 
-# add fixed cacerts
-COPY --from=builder /etc/ssl/certs/java/cacerts /opt/java/openjdk/lib/security/cacerts
+# # dependencies
+# RUN apk -U upgrade && apk add --no-cache bash ttf-dejavu fontconfig
 
-# add Metabase script and uberjar
-RUN mkdir -p bin target/uberjar
-COPY --from=builder /app/source/target/uberjar/metabase.jar /app/target/uberjar/
-COPY --from=builder /app/source/bin/start /app/bin/
+# # add fixed cacerts
+# COPY --from=builder /etc/ssl/certs/java/cacerts /opt/java/openjdk/lib/security/cacerts
 
-# create the plugins directory, with writable permissions
-RUN mkdir -p /plugins && chmod a+rwx /plugins
+# # add Metabase script and uberjar
+# RUN mkdir -p bin target/uberjar
+# COPY --from=builder /app/source/target/uberjar/metabase.jar /app/target/uberjar/
+# COPY --from=builder /app/source/bin/start /app/bin/
 
-# expose our default runtime port
-EXPOSE 3000
+# # create the plugins directory, with writable permissions
+# RUN mkdir -p /plugins && chmod a+rwx /plugins
 
-# run it
-ENTRYPOINT ["/app/bin/start"]
+# # expose our default runtime port
+# EXPOSE 3000
+
+# # run it
+# ENTRYPOINT ["/app/bin/start"]
