@@ -123,23 +123,14 @@ export default class EmbedFrame extends Component {
               ) : null}
             </div>
           ) : null}
-          <div className="flex flex-column relative full flex-full">
+          <div className="flex flex-column relative justify-content-center full flex-full dashboard-content">
             {children}
           </div>
         </div>
-        {showFooter && (
-          <div className="EmbedFrame-footer p1 md-p2 lg-p3 border-top flex-no-shrink flex align-center">
-            {!MetabaseSettings.hideEmbedBranding() && (
-              <LogoBadge dark={theme} />
-            )}
-            {actionButtons && (
-              <div className="flex-align-right text-medium">
-                {actionButtons}
-              </div>
-            )}
-          </div>
-        )}
+        
       </div>
+      <LogoBadge dark={theme} class='logo' />
+    </React.Fragment>
     );
   }
 }
