@@ -122,7 +122,7 @@ export default class EmbedFrame extends Component {
               ) : null}
             </div>
           ) : null}
-          <div className="flex flex-column relative justify-content-center full flex-full dashboard-content">
+          <div className="flex flex-column relative full flex-full dashboard-content">
             {children}
           </div>
         </div>

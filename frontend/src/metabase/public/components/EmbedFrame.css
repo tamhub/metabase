@@ -91,6 +91,8 @@
 }
 
 .dashboard-content {
-  padding: 10%;
+  padding: 72px 32px;
+  max-width: 1536px;
+  margin: auto;
 }
 
