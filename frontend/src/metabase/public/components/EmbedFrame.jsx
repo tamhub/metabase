@@ -89,13 +89,12 @@ export default class EmbedFrame extends Component {
           })}
         >
           {name || (parameters && parameters.length > 0) ? (
-            
             <div className="EmbedFrame-header">
 
               {logo && (
-                 <img src={logo} />
+                <img src={logo} />
               )}
-               
+
               {name && (
                 <span className='title '> {name} </span>
               )}
@@ -103,8 +102,8 @@ export default class EmbedFrame extends Component {
                 <div className="action-button">
                   {actionButtons}
                 </div>
-              )} 
-              
+              )}
+
               {parameters && parameters.length > 0 ? (
                 <div className="flex ml-auto dashboard-content">
                   <Parameters
@@ -127,7 +126,6 @@ export default class EmbedFrame extends Component {
             {children}
           </div>
         </div>
-        
       </div>
       <LogoBadge dark={theme} class='logo' />
     </React.Fragment>
