@@ -144,9 +144,11 @@ export default class PublicDashboard extends Component {
       ? getDashboardActions(this, { ...this.props, isPublic: true })
       : [];
 
-    return (
+    return (  
+
       <EmbedFrame
         name={dashboard && dashboard.name}
+        logo={'https://www.arabnews.com/sites/default/files/styles/n_670_395/public/main-image/2020/08/11/2225076-12248793.png?itok=ZoQIiiAw'}
         description={dashboard && dashboard.description}
         dashboard={dashboard}
         parameters={parameters}
