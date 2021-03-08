@@ -148,7 +148,8 @@ export default class PublicDashboard extends Component {
 
       <EmbedFrame
         name={dashboard && dashboard.name}
-        logo={'https://www.arabnews.com/sites/default/files/styles/n_670_395/public/main-image/2020/08/11/2225076-12248793.png?itok=ZoQIiiAw'}
+        // TODO: Repleace image with a dynamic one. This is just a placeholder
+        logo={'https://twebs-uploads.s3-eu-west-1.amazonaws.com/local/website_assets/NEOM_Logo.png'}
         description={dashboard && dashboard.description}
         dashboard={dashboard}
         parameters={parameters}
