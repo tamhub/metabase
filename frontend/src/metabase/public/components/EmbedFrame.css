@@ -1,11 +1,38 @@
 .EmbedFrame {
+  background: linear-gradient(0deg, #F9F7F2, #F9F7F2), linear-gradient(225deg, #FE336D 0%, #F98257 100%);
+}
+
+.EmbedFrame-header {
+  position: absolute;
+  top: 0;
+  width: 100%;   
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: row;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: var(--color-text-dark);
   background-color: white;
 }
 
-.EmbedFrame-header,
-.EmbedFrame-footer {
-  color: var(--color-text-dark);
-  background-color: white;
+.EmbedFrame-header .title {
+color: #000;
+font-weight: 500;
+align-self: center;
+}
+
+.EmbedFrame-header img {
+  height: 50px;
+  widows: 50px;
+}
+
+.action-button {
+  align-self: center;
 }
 
 .Theme--night.EmbedFrame {
@@ -38,3 +65,26 @@
 .Theme--night.EmbedFrame .enable-dots .dc-tooltip circle.dot {
   fill: currentColor;
 }
+.logo {
+  position: absolute;
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: row;
+  flex-flow: row wrap;
+
+  bottom:0;
+  right:25%;
+  left:45%;
+}
+
+.logo .slogan {
+  align-self: center;
+  margin-right: 10px;
+}
+
+.dashboard-content {
+  padding: 10%;
+}
+
