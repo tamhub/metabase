@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from "react";
-import LogoIcon from "metabase/components/LogoIcon";
+import LogoIcon from "metabase/components/TamLogo";
 
 import { t, jt } from "ttag";
 
