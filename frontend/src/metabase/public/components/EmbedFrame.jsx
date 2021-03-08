@@ -57,6 +57,7 @@ export default class EmbedFrame extends Component {
       className,
       children,
       description,
+      logo,
       actionButtons,
       location,
       parameters,
@@ -73,8 +74,8 @@ export default class EmbedFrame extends Component {
     };
 
     const name = titled ? this.props.name : null;
-
     return (
+      <React.Fragment>
       <div
         className={cx("EmbedFrame flex flex-column", className, {
           spread: innerScroll,
@@ -88,12 +89,24 @@ export default class EmbedFrame extends Component {
           })}
         >
           {name || (parameters && parameters.length > 0) ? (
-            <div className="EmbedFrame-header flex align-center p1 sm-p2 lg-p3">
-              {name && (
-                <TitleAndDescription title={name} description={description} />
+            
+            <div className="EmbedFrame-header">
+
+              {logo && (
+                 <img src={logo} />
               )}
+               
+              {name && (
+                <span className='title '> {name} </span>
+              )}
+              {actionButtons && (
+                <div className="action-button">
+                  {actionButtons}
+                </div>
+              )} 
+              
               {parameters && parameters.length > 0 ? (
-                <div className="flex ml-auto">
+                <div className="flex ml-auto dashboard-content">
                   <Parameters
                     dashboard={this.props.dashboard}
                     parameters={parameters.map(p => ({
