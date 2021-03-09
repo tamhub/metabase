@@ -3474,6 +3474,14 @@ databaseChangeLog:
             tableName: report_dashboard
             columns:
               - column:
+                  name: bg_color
+                  type: text
+                  remarks: 'Background color of the dashboard'
+                  defaultValue: ''
+        - addColumn:
+            tableName: report_dashboard
+            columns:
+              - column:
                   name: embedding_params
                   type: text
                   remarks: 'Serialized JSON containing information about required parameters that must be supplied when embedding this Dashboard.'

@@ -154,6 +154,11 @@ const Dashboards = createEntity({
         placeholder: t`It's optional but oh, so helpful`,
       },
       {
+        name: "bg_color",
+        title: t`Background Color`,
+        placeholder: t`It's optional but you can choose a color for the background`,
+      },
+      {
         name: "collection_id",
         title: t`Which collection should this go in?`,
         type: "collection",
