@@ -84,7 +84,7 @@ export default class EmbedFrame extends Component {
         })}
       >
         <div
-          className={cx("flex flex-column flex-full relative", {
+          className={cx("flex flex-column flex-full relative full-height", {
             "scroll-y": innerScroll,
           })}
         >
