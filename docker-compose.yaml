@@ -22,6 +22,7 @@ services:
     restart: always 
     volumes:
       - "metabase-data:/app"
+      - "./src:/app/src"
     ports:
       - "3000:3000"
     environment:
