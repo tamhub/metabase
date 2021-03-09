@@ -64,11 +64,12 @@
 
 (api/defendpoint POST "/"
   "Create a new Dashboard."
-  [:as {{:keys [name description bg_color parameters collection_id collection_position], :as dashboard} :body}]
+  [:as {{:keys [name description bg_color bg_image parameters collection_id collection_position], :as dashboard} :body}]
   {name                su/NonBlankString
    parameters          [su/Map]
    description         (s/maybe s/Str)
    bg_color            (s/maybe s/Str)
+   bg_image            (s/maybe s/Str)
    collection_id       (s/maybe su/IntGreaterThanZero)
    collection_position (s/maybe su/IntGreaterThanZero)}
   ;; if we're trying to save the new dashboard in a Collection make sure we have permissions to do that
@@ -76,6 +77,7 @@
   (let [dashboard-data {:name                name
                         :description         description
                         :bg_color            bg_color
+                        :bg_image            bg_image
                         :parameters          (or parameters [])
                         :creator_id          api/*current-user-id*
                         :collection_id       collection_id

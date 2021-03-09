@@ -7835,6 +7835,20 @@ databaseChangeLog:
             columnDataType: boolean
             defaultValueBoolean: true
 
+  - changeSet:
+      id: 274
+      author: Rezk
+      comment: Added 0.37.2
+      changes:
+        - addColumn:
+            tableName: report_dashboard
+            columns:
+              - column:
+                  name: bg_image
+                  type: text
+                  remarks: 'Background image for the dashboard'
+                  defaultValue: ''
+
  # Add refingerprint to database to mark if fingerprinting or
  # not. Nullable in first pass so can be opt in and then in a
  # subsequent pass can be globally turned on where null, respecting
