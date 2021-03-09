@@ -144,7 +144,7 @@ export default class PublicDashboard extends Component {
       ? getDashboardActions(this, { ...this.props, isPublic: true })
       : [];
 
-    return (  
+    return (
 
       <EmbedFrame
         name={dashboard && dashboard.name}
@@ -152,6 +152,8 @@ export default class PublicDashboard extends Component {
         logo={'https://twebs-uploads.s3-eu-west-1.amazonaws.com/local/website_assets/NEOM_Logo.png'}
         description={dashboard && dashboard.description}
         dashboard={dashboard}
+        bgImage={dashboard && dashboard.bg_image}
+        bgColor={dashboard && dashboard.bg_color}
         parameters={parameters}
         parameterValues={parameterValues}
         setParameterValue={this.props.setParameterValue}

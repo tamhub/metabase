@@ -63,6 +63,8 @@ export default class EmbedFrame extends Component {
       parameters,
       parameterValues,
       setParameterValue,
+      bgImage,
+      bgColor,
     } = this.props;
     const { innerScroll } = this.state;
 
@@ -82,6 +84,7 @@ export default class EmbedFrame extends Component {
           "bordered rounded shadowed": bordered,
           [`Theme--${theme}`]: !!theme,
         })}
+      style= {{backgroundImage: `url(${bgImage})`, backgroundColor: bgColor}}
       >
         <div
           className={cx("flex flex-column flex-full relative full-height", {
