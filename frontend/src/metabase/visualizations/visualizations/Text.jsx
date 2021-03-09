@@ -101,6 +101,13 @@ export default class Text extends Component {
       widget: "toggle",
       default: true,
     },
+    "text.color": {
+      section: t`Display`,
+      title: t`Font Color`,
+      default: "#000000",
+      widget: "input",
+      dashboard: true,
+    },
   };
 
   UNSAFE_componentWillReceiveProps(newProps: VisualizationProps) {
@@ -149,14 +156,17 @@ export default class Text extends Component {
             onPreview={this.onPreview.bind(this)}
           />
           {this.state.isShowingRenderedOutput ? (
-            <ReactMarkdown
-              className={cx(
-                "full flex-full flex flex-column text-card-markdown",
-                styles["text-card-markdown"],
-                getSettingsStyle(settings),
-              )}
-              source={settings.text}
-            />
+            <div style={{color: settings["text.color"]}}>
+              <ReactMarkdown
+                className={cx(
+                  "full flex-full flex flex-column text-card-markdown",
+                  styles["text-card-markdown"],
+                  getSettingsStyle(settings),
+                )}
+                source={settings.text}
+
+              />
+            </div>
           ) : (
             <textarea
               className={cx(
@@ -182,6 +192,7 @@ export default class Text extends Component {
              * padding to help align the titles with the wrapper */
             { pl0: !settings["dashcard.background"] },
           )}
+          style={{color: settings["text.color"]}}
         >
           <ReactMarkdown
             className={cx(
