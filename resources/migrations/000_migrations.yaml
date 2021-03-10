@@ -7848,6 +7848,19 @@ databaseChangeLog:
                   type: text
                   remarks: 'Background image for the dashboard'
                   defaultValue: ''
+  - changeSet:
+      id: 275
+      author: Sehaim
+      comment: Added 0.37.2
+      changes:
+        - addColumn:
+            tableName: report_dashboard
+            columns:
+              - column:
+                  name: dashboard_logo
+                  type: text
+                  remarks: 'Logo for the dashboard'
+                  defaultValue: ''
 
  # Add refingerprint to database to mark if fingerprinting or
  # not. Nullable in first pass so can be opt in and then in a
