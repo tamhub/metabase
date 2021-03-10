@@ -164,6 +164,11 @@ const Dashboards = createEntity({
         placeholder: t`It's optional but you can choose an image for the background`,
       },
       {
+        name: "dashboard_logo",
+        title: t`Dashboard Logo`,
+        placeholder: t`It's optional but you can add a link to the logo of the dashboard`,
+      },
+      {
         name: "collection_id",
         title: t`Which collection should this go in?`,
         type: "collection",
