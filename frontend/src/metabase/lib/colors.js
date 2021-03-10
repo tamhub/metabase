@@ -39,6 +39,11 @@ const colors = {
   "bg-light": "#F9FBFC",
   "bg-white": "#FFFFFF",
   "bg-yellow": "#FFFCF2",
+  "bg-sand": "#c2b280",
+  "bg-pink": "#FFC0CB",
+  "bg-orange": "#FF7F50",
+  "bg-gray": "#808080",
+  "bg-light-blue": "#05B8CC",
   shadow: "rgba(0,0,0,0.08)",
   border: "#F0F0F0",
   /* Saturated colors for the SQL editor. Shouldn't be used elsewhere since they're not white-labelable. */
@@ -117,7 +122,11 @@ function syncDeprecatedColorFamilies() {
   normal.purple = saturated.purple = desaturated.purple = colors["accent2"];
   normal.red = saturated.red = desaturated.red = colors["accent3"];
   normal.yellow = saturated.yellow = desaturated.yellow = colors["accent4"];
-  normal.orange = colors["accent5"];
+  normal.sand = saturated.sand = desaturated.sand = colors["bg-sand"];
+  normal.pink = saturated.pink = desaturated.pink = colors["bg-pink"];
+  normal.orange = saturated.orange = desaturated.orange = colors["bg-orange"];
+  normal.gray = saturated.gray = desaturated.gray = colors["bg-gray"];
+  normal.lightblue = saturated.lightblue = desaturated.lightblue = colors["bg-light-blue"];
   normal.teal = colors["accent6"];
   normal.indigo = colors["accent7"];
   normal.gray = colors["text-dark"];
