@@ -143,13 +143,11 @@ export default class PublicDashboard extends Component {
     const buttons = !IFRAMED
       ? getDashboardActions(this, { ...this.props, isPublic: true })
       : [];
-
-    return (
+    return (  
 
       <EmbedFrame
         name={dashboard && dashboard.name}
-        // TODO: Repleace image with a dynamic one. This is just a placeholder
-        logo={'https://twebs-uploads.s3-eu-west-1.amazonaws.com/local/website_assets/NEOM_Logo.png'}
+        logo={dashboard && dashboard.dashboard_logo}
         description={dashboard && dashboard.description}
         dashboard={dashboard}
         bgImage={dashboard && dashboard.bg_image}
