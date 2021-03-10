@@ -91,7 +91,7 @@ export default class EmbedFrame extends Component {
             "scroll-y": innerScroll,
           })}
         >
-          {name || (parameters && parameters.length > 0) ? (
+          {name ? (
             <div className="EmbedFrame-header">
 
               {logo && (
@@ -106,9 +106,12 @@ export default class EmbedFrame extends Component {
                   {actionButtons}
                 </div>
               )}
-
-              {parameters && parameters.length > 0 ? (
-                <div className="flex ml-auto dashboard-content">
+            </div>
+          ) : null}
+          
+          <div className="flex flex-column relative full flex-full dashboard-content">
+          {parameters && parameters.length > 0 ? (
+                <div className="flex">
                   <Parameters
                     dashboard={this.props.dashboard}
                     parameters={parameters.map(p => ({
@@ -123,9 +126,6 @@ export default class EmbedFrame extends Component {
                   />
                 </div>
               ) : null}
-            </div>
-          ) : null}
-          <div className="flex flex-column relative full flex-full dashboard-content">
             {children}
           </div>
         </div>
